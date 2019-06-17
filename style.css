@@ -1,3 +1,11 @@
+#logout {
+    float: right;
+    text-align: center;
+}
+#back_home {
+    float: right;
+    text-align: center;
+}
 .desc {
     font-size: 18px;
     border-bottom: 3px solid #68dd72;

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>個人情報確認</title>
+</head>
+<body>
+    <div id="page-all">
+        <div id="header"></div>
+        <div id="menu_contents_wrap">
+            <div id="contents_wrap">
+                <!-- 左に表示させるメニュー(予定なのでまだ追加していません)
+                <div id="menu_area">
+                    <div id="menu_wrap">
+                        <ul id="menu">
+                            <li id="menu_top">トップへ戻る</li>
+                            <li id="menu_registration">名刺を登録する</li>
+                            <li id="menu_check">名刺を確認する</li>
+                            <li id="menu_notice">運営からのお知らせ</li>
+                            <li id="menu_help">ヘルプ</li>
+                            <li id="menu_inquiry">お問い合わせ</li>
+                        </ul>
+                    </div>
+                </div>
+                -->
+                <div id="contents_area">
+                    <!-- reserve_item_groupクラス内の要素はDBから持ってくる予定-->
+                    <div class="form_item">
+                        <div class="reserve_item_title">
+                            ID番号
+                            <div class="reserve_item_group">ASOK</div>
+                        </div>
+                    </div>
+                    <div class="form_item">
+                        <div class="reserve_item_title">
+                            名前
+                            <div class="reserve_item_group">Masaki Asaoka</div>
+                        </div>
+                    </div>
+                    <div class="form_item">
+                        <div class="reserve_item_title">
+                            生年月日
+                            <div class="reserve_item_group">1997年12月14日</div>
+                        </div>
+                    </div>
+                    <div class="form_item">
+                        <div class="reserve_item_title">
+                            性別
+                            <div class="reserve_item_group">男</div>
+                        </div>
+                    </div>
+                    <div class="form_item">
+                        <div class="reserve_item_title">
+                            電話番号
+                            <div class="reserve_item_group">0120-441-222</div>
+                        </div>
+                    </div>
+                    <div class="form_item">
+                        <div class="reserve_item_title">
+                            大学・専門学校名
+                            <div class="reserve_item_group">京都大学</div>
+                        </div>
+                    </div>
+                    <div class="form_item">
+                        <div class="reserve_item_title">
+                            学部・学科
+                            <div class="reserve_item_group">医学部</div>
+                        </div>
+                    </div>
+                    <!-- 付属要素(過去エピ・キャリアなど)はここで編集するかは未定(2019/6/20)-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="button" value="変更">
+</body>
+</html>

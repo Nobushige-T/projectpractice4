@@ -16,8 +16,8 @@
             $option = array(
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
             );
-            $conn = new PDO("mysql:host=localhost;dbname=/各自のDB名/;charset=utf8",
-                "", "", $option);
+            $conn = new PDO("mysql:host=localhost;dbname=projectpractice4;charset=utf8",
+                "root", "Sweet1231", $option);
             $sql = "SELECT * FROM user "
                 ."WHERE User_ID ='{$userid}' AND "
                 ."Password='{$password}'";
@@ -36,12 +36,35 @@
     ?>
 </head>
 <body>
-    <input type="button" value="ログアウト" id="logout" onClick="location.href='logout.php';">
-    <p class="desc">名刺の新規登録はこちら</p>
-    <input type="button" value="登録する" onClick="location.href='./index.php'">
-    <p class="desc">制作した名刺の確認はこちら</p>
-    <input type="button" value="確認する" onClick="window.open('https://toarise.tales-ch.jp/');">
-    <p class="desc">個人情報の確認・変更はこちら</p>
-    <input type="button" value="確認する" onClick="window.open('https://runefactory.marv.jp/series/rf5/');">
+<div id="page_all">
+    <div id="header"></div>
+    <div id="menu_contents_wrap">
+        <div id="contents_wrap">
+            <!-- 左に表示させるメニュー(予定なのでまだ追加していません)
+            <div id="menu_area">
+                <div id="menu_wrap">
+                    <ul id="menu">
+                        <li id="menu_top">トップへ戻る</li>
+                        <li id="menu_registration">名刺を登録する</li>
+                        <li id="menu_check">名刺を確認する</li>
+                        <li id="menu_notice">運営からのお知らせ</li>
+                        <li id="menu_help">ヘルプ</li>
+                        <li id="menu_inquiry">お問い合わせ</li>
+                    </ul>
+                </div>
+            </div>
+            -->
+            <div id="contents_area">
+                <input type="button" value="ログアウト" id="logout" onClick="location.href='logout.php';">
+                <p class="desc">名刺の新規登録はこちら</p>
+                <input type="button" value="登録する" onClick="location.href='index.php'">
+                <p class="desc">制作した名刺の確認はこちら</p>
+                <input type="button" value="確認する" onClick="window.open('https://toarise.tales-ch.jp/');">
+                <p class="desc">個人情報の確認・変更はこちら</p>
+                <input type="button" value="確認する" onClick="location.href='form.php';">
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

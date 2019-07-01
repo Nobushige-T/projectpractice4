@@ -8,7 +8,9 @@
 </head>
 <body>
     <div id="page-all">
-        <div id="header"></div>
+        <div id="header">
+            <input type="button" value="ログアウト" id="logout" onClick="location.href='logout.php';">
+        </div>
         <div id="menu_contents_wrap">
             <div id="contents_wrap">
                 <!-- 左に表示させるメニュー(予定なのでまだ追加していません)
@@ -74,6 +76,6 @@
             </div>
         </div>
     </div>
-    <input type="button" value="変更">
+    <input type="button" value="変更" onClick="window.open('https://toarise.tales-ch.jp/');">
 </body>
 </html>

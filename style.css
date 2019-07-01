@@ -1,7 +1,3 @@
-#logout {
-    float: right;
-    text-align: center;
-}
 #back_home {
     float: right;
     text-align: center;
@@ -9,6 +5,25 @@
 .desc {
     font-size: 18px;
     border-bottom: 3px solid #68dd72;
+}
+.detail {
+    display: none;
+    background: #fff;
+    width: 90%;
+    height: 10%;
+}
+#logout {
+    float: right;
+    text-align: center;
+}
+.required {
+    background-color: #f00a0a;
+    border-radius: 5px;
+    font-weight: 900;
+    color: #ffffff;
+}
+.sel_p {
+    line-height: 0;
 }
 .tabs {
     margin-top: 30px;
@@ -58,15 +73,6 @@ textarea {
 }
 .write{
     border-radius: 0.67em;
-}
-.detail {
-    display: none;
-    background: #fff;
-    width: 90%;
-    height: 10%;
-}
-.sel_p {
-    line-height: 0;
 }
 @media screen and (max-width: 480px) { 
     .button {

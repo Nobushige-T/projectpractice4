@@ -16,8 +16,8 @@
             $option = array(
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
             );
-            $conn = new PDO("mysql:host=localhost;dbname=projectpractice4;charset=utf8",
-                "root", "Sweet1231", $option);
+            $conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
+                "root", "", $option);
             $sql = "SELECT * FROM user "
                 ."WHERE User_ID ='{$userid}' AND "
                 ."Password='{$password}'";

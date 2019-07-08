@@ -32,43 +32,69 @@
                     <div class="form_item">
                         <div class="reserve_item_title">
                             ID番号
-                            <div class="reserve_item_group">ASOK</div>
+                            <div class="reserve_item_group">
+						    <?php
+							session_start();
+							$option = array(
+								PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
+								
+							$conn = new PDO("mysql:host=localhost;dbname=test;charset=utf8",
+											"root", "", $option);
+							$sql = "SELECT * FROM user_info";
+							$stmt=$conn->prepare($sql);
+							$stmt->execute();
+							
+							
+							
+							while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
+							if($row["User_ID"]==$_SESSION['login_user'][0]){
+								print $row["User_ID"];
+								print "<br>";
+							}
+							else{
+								exit();
+							}
+							
+							}
+							
+							?>
+							</div>
                         </div>
                     </div>
                     <div class="form_item">
                         <div class="reserve_item_title">
                             名前
-                            <div class="reserve_item_group">Masaki Asaoka</div>
+                            <div class="reserve_item_group"></div>
                         </div>
                     </div>
                     <div class="form_item">
                         <div class="reserve_item_title">
                             生年月日
-                            <div class="reserve_item_group">1997年12月14日</div>
+                            <div class="reserve_item_group"></div>
                         </div>
                     </div>
                     <div class="form_item">
                         <div class="reserve_item_title">
                             性別
-                            <div class="reserve_item_group">男</div>
+                            <div class="reserve_item_group"></div>
                         </div>
                     </div>
                     <div class="form_item">
                         <div class="reserve_item_title">
                             電話番号
-                            <div class="reserve_item_group">0120-441-222</div>
+                            <div class="reserve_item_group"></div>
                         </div>
                     </div>
                     <div class="form_item">
                         <div class="reserve_item_title">
                             大学・専門学校名
-                            <div class="reserve_item_group">京都大学</div>
+                            <div class="reserve_item_group"></div>
                         </div>
                     </div>
                     <div class="form_item">
                         <div class="reserve_item_title">
                             学部・学科
-                            <div class="reserve_item_group">医学部</div>
+                            <div class="reserve_item_group"></div>
                         </div>
                     </div>
                     <!-- 付属要素(過去エピ・キャリアなど)はここで編集するかは未定(2019/6/20)-->

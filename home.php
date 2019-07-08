@@ -7,32 +7,32 @@
     <link rel="stylesheet" href="style.css">
     <title>ホーム画面</title>
     <?php 
-        $userid = isset($_POST['userid'])? 
-        $_POST['userid']: null;
-        $password = isset($_POST['password'])? 
-        $_POST['password']: null;
-    
-        if(!empty($userid) && !empty($password)){
-            $option = array(
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-            );
-            $conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
-                "root", "", $option);
-            $sql = "SELECT * FROM user "
-                ."WHERE User_ID ='{$userid}' AND "
-                ."Password='{$password}'";
-            $result = $conn->query($sql);
-            $u = $result->fetch();
-            if(!empty($u)){
-                session_start();
-                $_SESSION['user_id'] = $userid;
-                echo "ようこそ、".$_SESSION['user_id']."さん";
-            }else{
-                echo '認証できませんでした';
-            }
-        }else{
-            header("location: ./title.html");
-        }
+    $User_ID = isset($_POST['User_ID'])? 
+	$_POST['User_ID']: null;
+	$Password = isset($_POST['Password'])? 
+	$_POST['Password']: null;
+
+	if(!empty($User_ID) && !empty($Password)){
+	$option = array(
+		PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+	);
+	$conn = new PDO("mysql:host=localhost;dbname=test;charset=utf8",
+		"root", "", $option);
+	$sql = "SELECT * FROM user "
+		."WHERE User_ID='{$User_ID}' AND "
+		."Password='{$Password}'";
+	$result = $conn->query($sql);
+	$u = $result->fetch();
+	if(!empty($u)){
+		session_start();
+		$_SESSION['login_user'] = $u;
+		echo "ようこそ,{$u['User_ID']}さん！";
+	}else{
+		echo '認証できませんでした';
+	}
+	}else{
+	echo 'userid,passwordを指定してください。';
+	}
     ?>
 </head>
 <body>
@@ -61,7 +61,7 @@
                 <p class="desc">制作した名刺の確認はこちら</p>
                 <input type="button" value="確認する" onClick="window.open('https://toarise.tales-ch.jp/');">
                 <p class="desc">個人情報の確認・変更はこちら</p>
-                <input type="button" value="確認する" onClick="location.href='form.php';">
+                <input type="button" value="確認する" id="Change" onClick="location.href='form.php';">
             </div>
         </div>
     </div>

@@ -9,6 +9,7 @@
 <body>
     <div id="page-all">
         <div id="header">
+            <input type="button" value="ホームへ戻る" id="back_home" onClick="location.href='home.php';">
             <input type="button" value="ログアウト" id="logout" onClick="location.href='logout.php';">
         </div>
         <div id="menu_contents_wrap">

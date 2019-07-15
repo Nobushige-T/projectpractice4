@@ -7,32 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <title>ホーム画面</title>
     <?php 
-        $userid = isset($_POST['userid'])? 
-        $_POST['userid']: null;
-        $password = isset($_POST['password'])? 
-        $_POST['password']: null;
-    
-        if(!empty($userid) && !empty($password)){
-            $option = array(
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-            );
-            $conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
-                "root", "", $option);
-            $sql = "SELECT * FROM user "
-                ."WHERE User_ID ='{$userid}' AND "
-                ."Password='{$password}'";
-            $result = $conn->query($sql);
-            $u = $result->fetch();
-            if(!empty($u)){
-                session_start();
-                $_SESSION['user_id'] = $userid;
-                echo "ようこそ、".$_SESSION['user_id']."さん";
-            }else{
-                echo '認証できませんでした';
-            }
-        }else{
-            header("location: ./title.html");
-        }
+        session_start();
+        header('Expires:-1');
+        header('Cache-Control:');
+        header('Pragma:');
+
+        echo "ようこそ、".$_SESSION['user_id']."さん";
     ?>
 </head>
 <body>

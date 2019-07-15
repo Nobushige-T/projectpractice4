@@ -11,6 +11,10 @@
 <body>
     <?php 
     session_start();
+    header('Expires:-1');
+    header('Cache-Control:');
+    header('Pragma:');
+
     echo "ようこそ、".$_SESSION['user_id']."さん";
 ?>
     <div id="page-all">

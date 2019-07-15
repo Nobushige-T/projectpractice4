@@ -41,7 +41,7 @@
                 <p class="desc">制作した名刺の確認はこちら</p>
                 <input type="button" value="確認する" onClick="window.open('https://toarise.tales-ch.jp/');">
                 <p class="desc">個人情報の確認・変更はこちら</p>
-                <input type="button" value="確認する" onClick="location.href='form.php';">
+                <input type="button" value="確認する" id="Change" onClick="location.href='form.php';">
             </div>
         </div>
     </div>

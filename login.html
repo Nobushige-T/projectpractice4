@@ -3,23 +3,27 @@
 	<head>
 	<meta charset="utf-8">
 	<title>ログイン</title>
-	<style>
-		table {
-			border : 1px solid gray;
-		}
-	</style>
+	<link rel="stylesheet" href="css/login.css">
 	<script src="jquery-3.2.1.min.js"></script>
 </head>
 <body>
-	<h1>ログインフォーム</h1>
-	<form action="login.php" method="POST">
-		<table>
+<div id="form">
+	<p class="form-title">login</p>
+	<form action="home.php" method="POST">
+		<p>userid</p>
+		<p class="mail"><input type="text" name="userid" /></p>
+		<p>password</p>
+		<p class="pass"><input type="password" name="password" /></p>
+		<p class="check"><input type="checkbox" name="checkbox" />パスワードを保存</p>
+		<p class="submit"><input type="submit" value="Login" /></p>
+		<!-- <table>
 			<tr><td>userid</td>
 			<td><input type="text" name="User_ID"></td></tr>
 			<tr><td>password</td>
 			<td><input type="password" name="Password"></td></tr>
 			<tr><td><button>送信</button></td><td></td></tr>
-		</table>
+		</table> -->
 	</form>
+</div>
 </body>
 </html>

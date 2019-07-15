@@ -3,42 +3,28 @@
 	<head>
 	<meta charset="utf-8">
 	<title>ログイン</title>
-	<style>
-		body {
-			background-image: url(images/MeiTell_login.jpg);
-			background-position: center center;
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-   			background-size: cover;
-   			background-color: #464646;
-		}
-		form {
-			text-align: center
-		}
-		table {
-			border : 1px solid gray;
-		}
-		form{
-		    max-width: 290px;
-    		margin: 0 auto;
-		}
-
-		h1 {
-			text-align: center;
-		}
-	</style>
+	<link rel="stylesheet" href="css/login.css">
 	<script src="jquery-3.2.1.min.js"></script>
 </head>
 <body>
-	<h1>ログインフォーム</h1>
+<div id="form">
+	<p class="form-title">login</p>
 	<form action="home.php" method="POST">
-		<table>
+		<p>userid</p>
+		<p class="mail"><input type="text" name="userid" /></p>
+		<p>password</p>
+		<p class="pass"><input type="password" name="password" /></p>
+		<p class="check"><input type="checkbox" name="checkbox" />パスワードを保存</p>
+		<p class="submit"><input type="submit" value="Login" /></p>
+
+		<!-- <table>
 			<tr><td>userid</td>
 			<td><input type="text" name="userid"></td></tr>
 			<tr><td>password</td>
 			<td><input type="password" name="password"></td></tr>
 			<tr><td><button>送信</button></td><td></td></tr>
-		</table>
+		</table> -->
 	</form>
+</div>
 </body>
 </html>

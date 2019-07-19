@@ -39,8 +39,8 @@
 							$option = array(
 								PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
-							$conn = new PDO("mysql:host=localhost;dbname=test;charset=utf8",
-											"root", "", $option);
+							$conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
+											"root", "test", $option);
 							$sql = "SELECT * FROM user_info";
 							$stmt=$conn->prepare($sql);
 							$stmt->execute();
@@ -71,7 +71,7 @@
             $option = array(
               PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
-            $conn = new PDO("mysql:host=localhost;dbname=test;charset=utf8",
+            $conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
                     "root", "", $option);
             $sql = "SELECT * FROM user_info";
             $stmt=$conn->prepare($sql);
@@ -100,7 +100,7 @@
             $option = array(
               PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
-            $conn = new PDO("mysql:host=localhost;dbname=test;charset=utf8",
+            $conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
                     "root", "", $option);
             $sql = "SELECT * FROM user_info";
             $stmt=$conn->prepare($sql);
@@ -129,7 +129,7 @@
             $option = array(
               PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
-            $conn = new PDO("mysql:host=localhost;dbname=test;charset=utf8",
+            $conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
                     "root", "", $option);
             $sql = "SELECT * FROM user_info";
             $stmt=$conn->prepare($sql);
@@ -159,7 +159,7 @@
             $option = array(
               PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
-            $conn = new PDO("mysql:host=localhost;dbname=test;charset=utf8",
+            $conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
                     "root", "", $option);
             $sql = "SELECT * FROM user_info";
             $stmt=$conn->prepare($sql);
@@ -188,7 +188,7 @@
             $option = array(
               PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
-            $conn = new PDO("mysql:host=localhost;dbname=test;charset=utf8",
+            $conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
                     "root", "", $option);
             $sql = "SELECT * FROM user_info";
             $stmt=$conn->prepare($sql);
@@ -217,7 +217,7 @@
             $option = array(
               PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
-            $conn = new PDO("mysql:host=localhost;dbname=test;charset=utf8",
+            $conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
                     "root", "", $option);
             $sql = "SELECT * FROM user_info";
             $stmt=$conn->prepare($sql);

@@ -1,7 +1,7 @@
-<?php 
-    $userid = isset($_POST['userid'])? 
+<?php
+    $userid = isset($_POST['userid'])?
     $_POST['userid']: null;
-    $password = isset($_POST['password'])? 
+    $password = isset($_POST['password'])?
     $_POST['password']: null;
 
     if(!empty($userid) && !empty($password)){
@@ -9,7 +9,7 @@
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         );
         $conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
-            "root", "", $option);
+            "root", "test", $option);
         $sql = "SELECT * FROM user "
         ."WHERE User_ID ='{$userid}' AND "
         ."Password='{$password}'";

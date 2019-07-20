@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <title>ホーム画面</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+    <script src="preview.js"></script>
+    <title>名刺の確認</title>
     <?php 
         header('Expires:-1');
         header('Cache-Control:');
         header('Pragma:');
-
-        echo "ようこそ、".$_SESSION['login_user']."さん";
+        // 削除処理(DELETE文?)
     ?>
 </head>
 <body>
@@ -35,13 +38,14 @@
             </div>
             -->
             <div id="contents_area">
-                <input type="button" value="ログアウト" id="logout" onClick="location.href='logout.php';">
-                <p class="desc">名刺の新規登録はこちら</p>
-                <input type="button" value="登録する" onClick="location.href='create.php'">
-                <p class="desc">制作した名刺の確認はこちら</p>
-                <input type="button" value="確認する" onClick="location.href='preview.php'">
-                <p class="desc">個人情報の確認・変更はこちら</p>
-                <input type="button" value="確認する" id="Change" onClick="location.href='form.php';">
+                <div id="delete_area">
+                    <p>削除しました。</p>
+                    <div id="delete_btn">
+                        <input type="button" value="名刺一覧へ戻る" onClick="location.href='preview.php'">
+                        <input type="button" value="ホームへ戻る" onClick="location.href='home.php';">
+                        <input type="button" value="ログアウト" onClick="location.href='logout.php';">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

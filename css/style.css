@@ -1,5 +1,46 @@
-#back_home {
+body {
+    margin: 0;
+}
+#back_home,#logout {
     float: right;
+    text-align: center;
+}
+.bc_contents:nth-child(odd) {
+    padding: 25px;
+    width: 70%;
+    height: 155px;
+    border: 1px solid #565656;
+    background-color: #ffe4c2;
+}
+.bc_contents:nth-child(even) {
+    padding: 25px;
+    width: 70%;
+    height: 155px;
+    border: 1px solid #565656;
+    background-color: #fff4e6;
+}
+.bc_creation_date,.bc_title {
+    position: relative;
+    padding: 2px;
+}
+.bc_delete,.bc_edit {
+    position: relative;
+    padding-top: 1%;
+    padding-left: 3%;
+    float: left;
+}
+.bc_details {
+    position: relative;
+    padding-left: 40%;
+}
+.bc_image {
+    position: relative;
+    float: left;
+    clear: left;
+}
+#delete_area {
+    position: relative;
+    padding: 5%;
     text-align: center;
 }
 .desc {
@@ -12,9 +53,52 @@
     width: 90%;
     height: 10%;
 }
-#logout {
-    float: right;
+#logout_area {
+    position: relative;
+    background-color: #636363;
+    width: 100vw;
+    height: 100vh;
+}
+.logout_btn:nth-child(odd) {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
     text-align: center;
+    background-color: #ececec;
+}
+.logout_btn:nth-child(even) {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #68dd72;
+}
+#logout_btns {
+    padding: 18px;
+}
+#logout_detail {
+    font-size: 18px;
+    position: relative;
+    top:25%;
+}
+#logout_explain {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 410px;
+    height: 410px;
+    text-align: center;
+}
+#logout_explain p {
+    position: relative;
+    font-weight: bold;
+    font-size: 24px;
+    top:10%;
 }
 .required {
     background-color: #f00a0a;

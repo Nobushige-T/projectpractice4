@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -7,16 +8,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="app.js"></script>
     <title>MeiTell replica</title>
-</head>
-<body>
     <?php 
-    session_start();
     header('Expires:-1');
     header('Cache-Control:');
     header('Pragma:');
-
-    echo "ようこそ、".$_SESSION['user_id']."さん";
-?>
+    ?>
+</head>
+<body>
     <div id="page-all">
         <div id="header">
             <input type="button" value="ログアウト" id="logout" onClick="location.href='logout.php';">

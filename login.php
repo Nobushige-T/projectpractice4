@@ -17,8 +17,8 @@
         $u = $result->fetch();
             if(!empty($u)){
                 session_start();
-                $_SESSION['user_id'] = $userid;
-                echo "ようこそ、".$_SESSION['user_id']."さん";
+                $_SESSION['login_user'] = $userid;
+                echo "ようこそ、".$_SESSION['login_user']."さん";
                 header("location: ./home.php");
             }else{
                 echo '認証できませんでした';

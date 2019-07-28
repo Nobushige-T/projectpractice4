@@ -23,7 +23,6 @@
     <div id="header"></div>
     <div id="menu_contents_wrap">
         <div id="contents_wrap">
-            <!-- 左に表示させるメニュー(予定なのでまだ追加していません)
             <div id="menu_area">
                 <div id="menu_wrap">
                     <ul id="menu">
@@ -36,7 +35,6 @@
                     </ul>
                 </div>
             </div>
-            -->
             <div id="contents_area">
                 <div id="delete_area">
                     <p>削除しました。</p>

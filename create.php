@@ -6,7 +6,8 @@
     <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/menu.js"></script>
     <title>MeiTell replica</title>
     <?php 
     header('Expires:-1');
@@ -21,20 +22,18 @@
         </div>
         <div id="menu_contents_wrap">
             <div id="contents_wrap">
-                <!-- 左に表示させるメニュー(予定なのでまだ追加していません)
                 <div id="menu_area">
                     <div id="menu_wrap">
                         <ul id="menu">
-                            <li id="menu_top">トップへ戻る</li>
-                            <li id="menu_registration">名刺を登録する</li>
-                            <li id="menu_check">名刺を確認する</li>
-                            <li id="menu_notice">運営からのお知らせ</li>
-                            <li id="menu_help">ヘルプ</li>
-                            <li id="menu_inquiry">お問い合わせ</li>
+                        <li id="menu_top" href="home.php"><img src="images/home-solid.svg" class="menu_img"><div class="list_cha">トップへ戻る</div></li>
+                        <li id="menu_registration" href="create.php"><img src="images/address-card-regular.svg" class="menu_img"><div class="list_cha">名刺を登録する</div></li>
+                        <li id="menu_check" href="preview.php"><img src="images/check-square-regular.svg" class="menu_img"><div class="list_cha">名刺を確認する</div></li>
+                        <li id="menu_notice" href="https://toarise.tales-ch.jp/"><img src="images/info-circle-solid.svg" class="menu_img"><div class="list_cha">運営からのお知らせ</div></li>
+                        <li id="menu_help" href="https://www.hakuhodo.co.jp/"><img src="images/question-circle-regular.svg" class="menu_img"><div class="list_cha">よくある質問</div></li>
+                        <li id="menu_inquiry" href="https://coconala.com/inquiry"><div class="list_cha">お問い合わせ</div></li>
                         </ul>
                     </div>
                 </div>
-                -->
                 <div id="contents_area">
                     <input type="button" value="ホームへ戻る" id="back_home" onClick="location.href='home.php';">
                     <p class="desc">どっちを作る？</p>

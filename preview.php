@@ -9,7 +9,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
-    <script src="preview.js"></script>
+    <script src="js/preview.js"></script>
+    <script src="js/menu.js"></script>
     <title>名刺の確認</title>
     <?php 
         header('Expires:-1');
@@ -25,26 +26,24 @@
     </div>
     <div id="menu_contents_wrap">
         <div id="contents_wrap">
-            <!-- 左に表示させるメニュー(予定なのでまだ追加していません)
             <div id="menu_area">
                 <div id="menu_wrap">
                     <ul id="menu">
-                        <li id="menu_top">トップへ戻る</li>
-                        <li id="menu_registration">名刺を登録する</li>
-                        <li id="menu_check">名刺を確認する</li>
-                        <li id="menu_notice">運営からのお知らせ</li>
-                        <li id="menu_help">ヘルプ</li>
-                        <li id="menu_inquiry">お問い合わせ</li>
+                        <li id="menu_top" href="home.php"><img src="images/home-solid.svg" class="menu_img"><div class="list_cha">トップへ戻る</div></li>
+                        <li id="menu_registration" href="create.php"><img src="images/address-card-regular.svg" class="menu_img"><div class="list_cha">名刺を登録する</div></li>
+                        <li id="menu_check" href="preview.php"><img src="images/check-square-regular.svg" class="menu_img"><div class="list_cha">名刺を確認する</div></li>
+                        <li id="menu_notice" href="https://toarise.tales-ch.jp/"><img src="images/info-circle-solid.svg" class="menu_img"><div class="list_cha">運営からのお知らせ</div></li>
+                        <li id="menu_help" href="https://www.hakuhodo.co.jp/"><img src="images/question-circle-regular.svg" class="menu_img"><div class="list_cha">よくある質問</div></li>
+                        <li id="menu_inquiry" href="https://coconala.com/inquiry"><div class="list_cha">お問い合わせ</div></li>
                     </ul>
                 </div>
             </div>
-            -->
             <div id="contents_area">
                 <p class="desc">作成した名刺</p>
                 <div class="bc_contents">
                     <div class="bc_image">
                         <a href="images/amber.jpg" data-lightbox="bc_images">
-                            <img src="images/amber.jpg" alt="bc_image1">
+                            <img src="images/amber.jpg" alt="bc_image1" class="bc_imagedata">
                         </a>
                     </div>
                     <div class="bc_details">

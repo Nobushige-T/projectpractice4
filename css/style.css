@@ -38,6 +38,19 @@ body {
     float: left;
     clear: left;
 }
+.bc_imagedata {
+    width: 258px;
+    height: 156px;
+}
+#contents_area {
+    position: relative;
+    width: 74%; /* window画面(****px以内までとか制限をかける予定) */
+    padding-left: 5px;
+}
+#contents_wrap {
+    display: flex;
+    flex-direction: row;
+}
 #delete_area {
     position: relative;
     padding: 5%;
@@ -52,6 +65,17 @@ body {
     background: #fff;
     width: 90%;
     height: 10%;
+}
+.list_cha {
+    /*
+    -webkit-align-items: center; /* 縦方向中央揃え (Safari) 
+    align-items: center; /* 縦方向中央揃え 
+    -webkit-justify-content: center; /* 横方向中央揃え (Safari)
+    justify-content: center; /* 横方向中央揃え */
+    
+    position: absolute;
+    left: 70px;
+    font-size: 18px;
 }
 #logout_area {
     position: relative;
@@ -99,6 +123,40 @@ body {
     font-weight: bold;
     font-size: 24px;
     top:10%;
+}
+#menu {
+    list-style: none;
+    background-color: #ffd484;
+    padding-left: 0;
+    height: 100vh;
+}
+#menu li {
+    display: -webkit-flex;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 5%;
+    background-color: #ffc355;
+    transition: all 0.5s ease;
+}
+#menu li:hover {
+    background-color: #ff9900;
+    cursor: pointer;
+}
+#menu_area {
+    position: relative;
+    display: inline-block;
+    width: 26%; /* window画面(****px以内までとか制限をかける予定) */
+    height: 100vh;
+}
+.menu_img {
+    position: absolute;
+    left: 40px;
+    width: 25px;
+    height: 25px;
+}
+#menu_top,#menu_registration,#menu_check,#menu_notice,#menu_help {
+    border-bottom: 1px solid #565656;
 }
 .required {
     background-color: #f00a0a;

@@ -1,5 +1,59 @@
-#back_home {
+body {
+    margin: 0;
+}
+#back_home,#logout {
     float: right;
+    text-align: center;
+}
+.bc_contents:nth-child(odd) {
+    padding: 25px;
+    width: 70%;
+    height: 155px;
+    border: 1px solid #565656;
+    background-color: #ffe4c2;
+}
+.bc_contents:nth-child(even) {
+    padding: 25px;
+    width: 70%;
+    height: 155px;
+    border: 1px solid #565656;
+    background-color: #fff4e6;
+}
+.bc_creation_date,.bc_title {
+    position: relative;
+    padding: 2px;
+}
+.bc_delete,.bc_edit {
+    position: relative;
+    padding-top: 1%;
+    padding-left: 3%;
+    float: left;
+}
+.bc_details {
+    position: relative;
+    padding-left: 40%;
+}
+.bc_image {
+    position: relative;
+    float: left;
+    clear: left;
+}
+.bc_imagedata {
+    width: 258px;
+    height: 156px;
+}
+#contents_area {
+    position: relative;
+    width: 74%; /* window画面(****px以内までとか制限をかける予定) */
+    padding-left: 5px;
+}
+#contents_wrap {
+    display: flex;
+    flex-direction: row;
+}
+#delete_area {
+    position: relative;
+    padding: 5%;
     text-align: center;
 }
 .desc {
@@ -12,9 +66,97 @@
     width: 90%;
     height: 10%;
 }
-#logout {
-    float: right;
+.list_cha {
+    /*
+    -webkit-align-items: center; /* 縦方向中央揃え (Safari) 
+    align-items: center; /* 縦方向中央揃え 
+    -webkit-justify-content: center; /* 横方向中央揃え (Safari)
+    justify-content: center; /* 横方向中央揃え */
+    
+    position: absolute;
+    left: 70px;
+    font-size: 18px;
+}
+#logout_area {
+    position: relative;
+    background-color: #636363;
+    width: 100vw;
+    height: 100vh;
+}
+.logout_btn:nth-child(odd) {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
     text-align: center;
+    background-color: #ececec;
+}
+.logout_btn:nth-child(even) {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #68dd72;
+}
+#logout_btns {
+    padding: 18px;
+}
+#logout_detail {
+    font-size: 18px;
+    position: relative;
+    top:25%;
+}
+#logout_explain {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 410px;
+    height: 410px;
+    text-align: center;
+}
+#logout_explain p {
+    position: relative;
+    font-weight: bold;
+    font-size: 24px;
+    top:10%;
+}
+#menu {
+    list-style: none;
+    background-color: #ffd484;
+    padding-left: 0;
+    height: 100vh;
+}
+#menu li {
+    display: -webkit-flex;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 5%;
+    background-color: #ffc355;
+    transition: all 0.5s ease;
+}
+#menu li:hover {
+    background-color: #ff9900;
+    cursor: pointer;
+}
+#menu_area {
+    position: relative;
+    display: inline-block;
+    width: 26%; /* window画面(****px以内までとか制限をかける予定) */
+    height: 100vh;
+}
+.menu_img {
+    position: absolute;
+    left: 40px;
+    width: 25px;
+    height: 25px;
+}
+#menu_top,#menu_registration,#menu_check,#menu_notice,#menu_help {
+    border-bottom: 1px solid #565656;
 }
 .required {
     background-color: #f00a0a;

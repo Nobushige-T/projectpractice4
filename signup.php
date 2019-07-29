@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="js/menu.js"></script>
     <title>登録中</title>
     <?php 
         /* 新規登録のDB登録書くところ */
@@ -27,6 +28,8 @@
                     <input type="text" id="userid">
                     <p class="desc"><span class="required">必須</span>名前</p>
                     <input type="text" id="name">
+                    <p class="desc"><span class="required">必須</span>フリガナ</p>
+                    <input type="text" id="ruby">
                     <p class="desc"><span class="required">必須</span>生年月日</p>
                     <select id="year" name="birth01" type="text" class="js-changeYear">
                         <option value="0">----</option>

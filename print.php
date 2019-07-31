@@ -21,18 +21,18 @@
 		PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 	);
 	$conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
-		"root", "test", $option);
+		"root", "", $option);
 	$row = null;
     $userid = $_SESSION['user_id'];
 
-	$sql = "SELECT * FROM user_info WHERE User_ID = '$userid'";
+	$sql = "SELECT * FROM user_info WHERE user_id = '$userid'";
 	$stmt = $conn -> query($sql);
 	$row = null;
 
 	foreach ($stmt as $row){}
 
 	if($row == null){
-		$sql_insert=$conn->prepare("INSERT INTO user_info(User_ID,Name,Birth,Sex,Tel,address,School,Faculty,Career_His1,Career_His2,Career_His3,certificate1,certificate2,certificate3,certificate4,certificate5,past_epi,hobby,skill,workplace,advantage,disadvantage,research,research_content,Preferred_job_type,development,url,appeal,motto)
+		$sql_insert=$conn->prepare("INSERT INTO user_info(user_id,name,birth,sex,tel,mail,School,Faculty,Career_His1,Career_His2,Career_His3,certificate1,certificate2,certificate3,certificate4,certificate5,past_epi,hobby,skill,workplace,advantage,disadvantage,research,research_content,Preferred_job_type,development,url,appeal,motto)
 		VALUES('{$userid}','','','','','',null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,'',null,null,null,'')");
 		$sql_insert->execute();
 	}
@@ -50,11 +50,11 @@
 
 
                                     <!-- disabledにしているものは既に登録しているデータを引っ張ってくる想定 -->
-									<p>名前:<?php echo $row['Name']; ?> </p>
-									<p>電話番号:<?php echo $row['Tel']; ?>" </p>
-									<p>メールアドレス: <?php echo $row['address']; ?></p>
-									<p>学校名:<?php echo $row['School']; ?></p>
-									<p>学部・学科<?php echo $row['Faculty']; ?></p>
+									<p>名前:<?php echo $row['name']; ?> </p>
+									<p>電話番号:<?php echo $row['tel']; ?>" </p>
+									<p>メールアドレス: <?php echo $row['mail']; ?></p>
+									<p>学校名:<?php echo $row['school']; ?></p>
+									<p>学部・学科<?php echo $row['faculty']; ?></p>
 
 
 										<br>

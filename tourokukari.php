@@ -13,10 +13,10 @@
 		PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 	);
 	$conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
-		"root", "test", $option);
+		"root", "", $option);
 
 	session_start();
-    $userid = $_SESSION['user_id'];
+    $userid = $_SESSION['login_user'];
 
 	$name = isset($_POST['name'])?
 		$_POST['name']: null;
@@ -26,7 +26,7 @@
 		$_POST['sex']: null;
 	$tel = isset($_POST['tel'])?
 		$_POST['tel']: null;
-	$address = isset($_POST['email'])?
+	$mail = isset($_POST['email'])?
 		$_POST['email']: null;
 	$school = isset($_POST['school'])?
 		$_POST['school']: null;
@@ -76,12 +76,10 @@
 		$_POST['motto']: null;
 
 	if(!empty($userid)){
-		$sql_update = $conn->prepare("UPDATE user_info SET Name=:name,Birth=:date,Sex=:sex,Tel=:tel,address=:address,School=:school,Faculty=:department,Career_His1=:career1,Career_His2=:career2,Career_His3=:career3,certificate1=:certificate1,certificate2=:certificate2,certificate3=:certificate3,certificate4=:certificate4,certificate5=:certificate5,past_epi=:past_epi,hobby=:hobby,skill=:skill,workplace=:workplace,advantage=:advantage,disadvantage=:disadvantage,research=:research,research_content=:research_content,Preferred_job_type=:preferred_job_type,development=:development,url=:url,appeal=:appeal,motto=:motto WHERE User_ID = '$userid'");
+		$sql_update = $conn->prepare("UPDATE user_info SET name=:name,birth=:date,sex=:sex,tel=:tel,mail=:mail,school=:school,faculty=:department,career_his1=:career1,career_his2=:career2,career_his3=:career3,certificate1=:certificate1,certificate2=:certificate2,certificate3=:certificate3,certificate4=:certificate4,certificate5=:certificate5,past_epi=:past_epi,hobby=:hobby,skill=:skill,workplace=:workplace,advantage=:advantage,disadvantage=:disadvantage,research=:research,research_content=:research_content,preferred_job_type=:preferred_job_type,development=:development,url=:url,appeal=:appeal,motto=:motto WHERE User_ID = '$userid'");
 
-		$sql_update->execute(array(':name' => $name,':date' => $date,':sex' => $sex,':tel' => $tel,':address' => $address,':school' => $school,':department' => $department,':career1' => $career1,':career2' => $career2,':career3' => $career3,':certificate1' => $certificate1,':certificate2' => $certificate2,':certificate3' => $certificate3,':certificate4' => $certificate4,':certificate5' => $certificate5,':past_epi' => $past_epi,':hobby' => $hobby,':skill' => $skill,':workplace' => $workplace,':advantage' => $advantage,':disadvantage' => $disadvantage,':research' => $research,':research_content' => $research_content,'preferred_job_type' => $preferred_job_type,':development' => $development,':url' => $url,':appeal' => $appeal,':motto' => $motto));
-
-
-		//$sql_update->execute(array(':name' => $name,':date' => $date,':sex' => $sex,':tel' => $tel,':address' => $address,':school' => $school,':department' => $department,':career1' => $career1,':career2' => $career2,':career3' => $career3,':certificate1' => $certificate1,':certificate2' => $certificate2,':certificate3' => $certificate3,':certificate4' => $certificate4,':certificate5' => $certificate5,':past_epi' => $past_epi,':hobby' => $hobby,':skill' => $skill,':workplace' => $workplace,':advantage' => $advantage,':disadvantage' => $disadvantage,':research' => $research,':research_content' => $research_content,':preferredjobtype' => $preferredjobtype,':development' => $development,':url' => $url,':appeal' => $appeal,':motto' => $motto));
+		$sql_update->execute(array(':name' => $name,':date' => $date,':sex' => $sex,':tel' => $tel,':mail' => $mail,':school' => $school,':department' => $department,':career1' => $career1,':career2' => $career2,':career3' => $career3,':certificate1' => $certificate1,':certificate2' => $certificate2,':certificate3' => $certificate3,':certificate4' => $certificate4,':certificate5' => $certificate5,':past_epi' => $past_epi,':hobby' => $hobby,':skill' => $skill,':workplace' => $workplace,':advantage' => $advantage,':disadvantage' => $disadvantage,':research' => $research,':research_content' => $research_content,'preferred_job_type' => $preferred_job_type,':development' => $development,':url' => $url,':appeal' => $appeal,':motto' => $motto));
+		
 		echo "登録完了";
 	}
 

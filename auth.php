@@ -11,7 +11,7 @@ if(!empty($userid) && !empty($password)){
 	$conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
 		"root", "test", $option);
 	$sql = "SELECT * FROM user "
-		."WHERE User_ID ='{$userid}' AND "
+		."WHERE user_id ='{$userid}' AND "
 		."Password='{$password}'";
 	$result = $conn->query($sql);
 	$u = $result->fetch();

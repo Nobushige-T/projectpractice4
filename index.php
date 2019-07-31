@@ -28,7 +28,7 @@
 	foreach ($stmt as $row){}
 
 	if($row == null){
-		$sql_insert=$conn->prepare("INSERT INTO user_info(User_ID,Name,Birth,Sex,Tel,address,School,Faculty,Career_His1,Career_His2,Career_His3,certificate1,certificate2,certificate3,certificate4,certificate5,past_epi,hobby,skill,workplace,advantage,disadvantage,research,research_content,development,url,appeal,motto)
+		$sql_insert=$conn->prepare("INSERT INTO user_info(User_ID,Name,Birth,Sex,Tel,mail,School,Faculty,Career_His1,Career_His2,Career_His3,certificate1,certificate2,certificate3,certificate4,certificate5,past_epi,hobby,skill,workplace,advantage,disadvantage,research,research_content,development,url,appeal,motto)
 		VALUES('{$userid}','','','','','',null,null,null,null,null,'null',null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,'')");
 		$sql_insert->execute();
 	}

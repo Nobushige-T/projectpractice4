@@ -64,7 +64,7 @@
                         <label class="tab" for="society">社会人用</label>
                         <div class="tab_contents" id="student_contents">
                             <div class="description">
-                                <form method="POST" action="tourokukari.html">
+                                <form method="POST" action="tourokukari.php">
                                     <!-- disabledにしているものは既に登録しているデータを引っ張ってくる想定 -->                                    <p>名前:<input type="text" name="name" value="<?php echo $row['name']; ?>" ></p>
 									<p>生年月日:<input type="date" name="date" value="<?php echo $row['birth']; ?>" ></p>
 									<p>性別:<select name="sex"><option value="">-</option><option value="man">男性</option><option value="woman">女性</option></select>

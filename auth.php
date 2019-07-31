@@ -9,7 +9,7 @@ if(!empty($userid) && !empty($password)){
 		PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 	);
 	$conn = new PDO("mysql:host=localhost;dbname=meitell;charset=utf8",
-		"root", "test", $option);
+		"root", "", $option);
 	$sql = "SELECT * FROM user "
 		."WHERE user_id ='{$userid}' AND "
 		."Password='{$password}'";
